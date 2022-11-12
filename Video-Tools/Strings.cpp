@@ -6,11 +6,16 @@ char* ucase(char* s,char* d)
 {
 	char* t = d;
 	while (*s) {
+#if 0 // Commnet-out non-ASCII chars by T.Yano 2014.01.19
 		if (*s >= 'a' && *s <= 'z') *d++ = *s -32; 
 		  else if (*s == (int)'ü') *d++ = 'Ü';
 		  else if (*s == (int)'ö') *d++ = 'Ö';
 		  else if (*s == (int)'a') *d++ = 'Ä';
 		  else if (*s == (int)'ß') { *d++ = 'S'; *d++ = 'S'; } else *d++ = *s;
+#else
+		if (islower(*s)) *d++ = toupper(*s);
+		else *d++ = *s;
+#endif
 		s++;
 	}
 	*d = 0;

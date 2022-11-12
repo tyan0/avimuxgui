@@ -846,7 +846,7 @@ BEGIN
     IDS_CANTOPENMP3         "Die MP3/AC3/DTS-Quelldatei konnte nicht geöffnet werden. Vermutlich ist der erste Frameheader fehlerhaft."
     IDS_VILB_SETMAHFLAGS    "MainAVIHeader.dwFlags ändern"
     IDS_VERSION             "Version"
-    IDS_VERSION_INFO        "1.17.8.3"
+    IDS_VERSION_INFO        "1.17.8.3.1" // Changed by T.Yano 2014.01.19
     IDS_VILB_CHUNKSIZES     "Chunkgrößen"
     IDS_VILB_OVER           "über"
     IDS_VILB_UPTO           "bis zu"

@@ -1082,7 +1082,7 @@ int SUBTITLES::ReadLine(char* lpcBuffer)
 		return result;
 	
 	lpcBuffer[0]=0;
-	strcpy(lpcBuffer, textFileLine.c_str());
+	strncpy(lpcBuffer, textFileLine.c_str(), 8192); // Patched by T.Yano 2014.01.19 (strcpy()->strncpy())
 	return result;
 //
 //	return GetSource()->ReadLine(lpcBuffer);
