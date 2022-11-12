@@ -1205,7 +1205,8 @@ int MuxThread_AVI(DEST_AVI_INFO* lpDAI)
 			goto finish;
 		} 
 
-	lpDAI->dlg->SetDlgItemText(IDC_DESTFILE,cFilename);
+	/* Patched by T.Yano 2021.02.20 */
+	lpDAI->dlg->SetDlgItemText(IDC_DESTFILE, CUTF8(cFilename).TStr());
 
 	DeleteFileUTF8(cFilename);
 	DestFile=new CFileStream;

@@ -1202,7 +1202,7 @@ void CAudioSourceTree::OnTvnGetdispinfo(NMHDR *pNMHDR, LRESULT *pResult)
 				{
 					if (bAddComma) 
 						sstrDisplayText << _T(", ");
-					sstrDisplayText << CUTF8(title).TStr();
+					sstrDisplayText << title; // Patched by T.Yano 2021.02.20
 				}			
 			}
 			
