@@ -1397,7 +1397,7 @@ void CAVIMux_GUIDlg::OnStart()
 	char			Buffer[200];
 	CString			cStr,cStr2;
 	char			cDrive[10];
-	char			cDebugFile[200];
+	char			cDebugFile[MAX_LONG_PATH]; // Extended from 200 to MAX_LONG_PATH by T.Yano 2021.02.20
 //	char			LongBuffer[1024];
 
 	bool			bFileNumberNeglected;
